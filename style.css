@@ -1,0 +1,645 @@
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070320;
+    min-height:100vh;
+    color:white;
+}
+
+/* =========================
+   FONTS
+========================= */
+
+@font-face{
+    font-family:"Ostrich";
+    src:url("./assets/fonts/ostrich-regular.ttf");
+}
+
+@font-face{
+    font-family:"Ostrich-Bold";
+    src:url("./assets/fonts/OstrichSans-Bold.otf");
+}
+
+@font-face{
+    font-family:"Montserrat-Regular";
+    src:url("./assets/fonts/Montserrat-Regular.ttf");
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:rgba(7,3,32,.75);
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+}
+
+header h1{
+    font-family:"Ostrich";
+    font-size:34px;
+    color:white;
+}
+
+header ul{
+    display:flex;
+    gap:25px;
+}
+
+header li{
+    list-style:none;
+    font-family:"Montserrat-Regular";
+    letter-spacing:1px;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    transition:.25s;
+}
+
+header a:hover{
+    color:#6f7cff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.title{
+
+    min-height:60vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:0 60px;
+}
+
+.title h1{
+
+    font-family:"Ostrich";
+    font-size:8rem;
+    margin-bottom:10px;
+
+    text-shadow:2px 8px 10px rgba(0,0,0,.4);
+}
+
+.title h2{
+
+    font-family:"Montserrat-Regular";
+    color:#d9d9d9;
+
+    font-weight:300;
+
+    line-height:1.7;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+
+    background:#030013;
+
+    border-top:1px solid #222d6a;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:60px 40px;
+}
+
+main h1{
+
+    font-family:"Ostrich";
+    font-size:72px;
+
+    margin-bottom:35px;
+
+    text-shadow:2px 6px 8px rgba(0,0,0,.35);
+}
+
+/* =========================
+   VIDEO ESSAY
+========================= */
+
+.video-essay{
+
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:80px;
+}
+
+.video{
+
+    flex:1 1 380px;
+
+    max-width:520px;
+
+    aspect-ratio:16/9;
+
+    transition:.3s;
+}
+
+.video iframe{
+
+    width:100%;
+    height:100%;
+
+    border:none;
+
+    border-radius:16px;
+}
+
+.video:hover{
+
+    transform:translateY(-8px);
+}
+
+/* =========================
+   SHORTS
+========================= */
+
+.short-form-content{
+
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+}
+
+.short-video{
+
+    width:280px;
+
+    transition:.3s;
+}
+
+.short-video:hover{
+
+    transform:translateY(-8px);
+}
+
+.short-video video,
+.short-video iframe{
+
+    width:100%;
+
+    aspect-ratio:9/16;
+
+    border:none;
+
+    border-radius:16px;
+
+    object-fit:cover;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg{
+    animation:slide 12s ease-in-out infinite alternate;
+    background-image:linear-gradient(-60deg,
+    rgb(33,25,85) 50%,
+    rgba(15,4,68,.3) 50%);
+
+    bottom:0;
+    left:-50%;
+    right:-50%;
+    top:0;
+
+    position:fixed;
+
+    opacity:.45;
+
+    z-index:-1;
+}
+
+.bg2{
+    animation-duration:16s;
+    animation-direction:alternate-reverse;
+}
+
+.bg3{
+    animation-duration:20s;
+}
+
+@keyframes slide{
+
+    from{
+        transform:translateX(-25%);
+    }
+
+    to{
+        transform:translateX(25%);
+    }
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width:900px){
+
+    header{
+
+        flex-direction:column;
+        gap:20px;
+    }
+
+    header ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .title{
+
+        padding:40px 25px;
+        text-align:center;
+        align-items:center;
+    }
+
+    .title h1{
+
+        font-size:5rem;
+    }
+
+    .title h2{
+
+        font-size:1rem;
+    }
+
+    main{
+
+        padding:40px 20px;
+    }
+
+    main h1{
+
+        font-size:3.5rem;
+        text-align:center;
+    }
+}/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070320;
+    min-height:100vh;
+    color:white;
+}
+
+/* =========================
+   FONTS
+========================= */
+
+@font-face{
+    font-family:"Ostrich";
+    src:url("./assets/fonts/ostrich-regular.ttf");
+}
+
+@font-face{
+    font-family:"Ostrich-Bold";
+    src:url("./assets/fonts/OstrichSans-Bold.otf");
+}
+
+@font-face{
+    font-family:"Montserrat-Regular";
+    src:url("./assets/fonts/Montserrat-Regular.ttf");
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:rgba(7,3,32,.75);
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+}
+
+header h1{
+    font-family:"Ostrich";
+    font-size:34px;
+    color:white;
+}
+
+header ul{
+    display:flex;
+    gap:25px;
+}
+
+header li{
+    list-style:none;
+    font-family:"Montserrat-Regular";
+    letter-spacing:1px;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    transition:.25s;
+}
+
+header a:hover{
+    color:#6f7cff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.title{
+
+    min-height:60vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:0 60px;
+}
+
+.title h1{
+
+    font-family:"Ostrich";
+    font-size:8rem;
+    margin-bottom:10px;
+
+    text-shadow:2px 8px 10px rgba(0,0,0,.4);
+}
+
+.title h2{
+
+    font-family:"Montserrat-Regular";
+    color:#d9d9d9;
+
+    font-weight:300;
+
+    line-height:1.7;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+
+    background:#030013;
+
+    border-top:1px solid #222d6a;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:60px 40px;
+}
+
+main h1{
+
+    font-family:"Ostrich";
+    font-size:72px;
+
+    margin-bottom:35px;
+
+    text-shadow:2px 6px 8px rgba(0,0,0,.35);
+}
+
+/* =========================
+   VIDEO ESSAY
+========================= */
+
+.video-essay{
+
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:80px;
+}
+
+.video{
+
+    flex:1 1 380px;
+
+    max-width:520px;
+
+    aspect-ratio:16/9;
+
+    transition:.3s;
+}
+
+.video iframe{
+
+    width:100%;
+    height:100%;
+
+    border:none;
+
+    border-radius:16px;
+}
+
+.video:hover{
+
+    transform:translateY(-8px);
+}
+
+/* =========================
+   SHORTS
+========================= */
+
+.short-form-content{
+
+    width:100%;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+}
+
+.short-video{
+
+    width:280px;
+
+    transition:.3s;
+}
+
+.short-video:hover{
+
+    transform:translateY(-8px);
+}
+
+.short-video video,
+.short-video iframe{
+
+    width:100%;
+
+    aspect-ratio:9/16;
+
+    border:none;
+
+    border-radius:16px;
+
+    object-fit:cover;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg{
+    animation:slide 12s ease-in-out infinite alternate;
+    background-image:linear-gradient(-60deg,
+    rgb(33,25,85) 50%,
+    rgba(15,4,68,.3) 50%);
+
+    bottom:0;
+    left:-50%;
+    right:-50%;
+    top:0;
+
+    position:fixed;
+
+    opacity:.45;
+
+    z-index:-1;
+}
+
+.bg2{
+    animation-duration:16s;
+    animation-direction:alternate-reverse;
+}
+
+.bg3{
+    animation-duration:20s;
+}
+
+@keyframes slide{
+
+    from{
+        transform:translateX(-25%);
+    }
+
+    to{
+        transform:translateX(25%);
+    }
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width:900px){
+
+    header{
+
+        flex-direction:column;
+        gap:20px;
+    }
+
+    header ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .title{
+
+        padding:40px 25px;
+        text-align:center;
+        align-items:center;
+    }
+
+    .title h1{
+
+        font-size:5rem;
+    }
+
+    .title h2{
+
+        font-size:1rem;
+    }
+
+    main{
+
+        padding:40px 20px;
+    }
+
+    main h1{
+
+        font-size:3.5rem;
+        text-align:center;
+    }
+}
